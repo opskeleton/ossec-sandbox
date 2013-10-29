@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+   ServerAdmin admin@nolabnoparty.local
+   DocumentRoot /var/www/analogi
+   ServerName ossec-server.local
+   ErrorLog /var/log/ossec-err-error_log
+   CustomLog /var/log/ossec-access-access_log common
+
+   <Directory /var/www/analogi>
+      Allow from all
+      Options -MultiViews
+   </Directory>
+</VirtualHost>
