@@ -1,6 +1,9 @@
 # ossec setup
 class ossec {
-  include apt
+
+  class { 'apt':
+    always_apt_update => true
+  }
 
   apt::source { 'ossec-ubuntu':
     location          => 'http://ppa.launchpad.net/nicolas-zin/ossec-ubuntu/ubuntu',

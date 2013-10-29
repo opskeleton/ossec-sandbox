@@ -12,8 +12,17 @@ GIT
   specs:
     editfile (0.0.1)
 
+GIT
+  remote: git://github.com/puppetlabs/puppetlabs-mysql.git
+  ref: master
+  sha: 6ec7872b444eb6caa3cfeb0117f975d9add70906
+  specs:
+    mysql (2.0.1)
+      puppetlabs/stdlib (>= 2.2.1)
+
 DEPENDENCIES
   editfile (>= 0)
+  mysql (>= 0)
   puppetlabs/apt (>= 0)
   puppetlabs/stdlib (>= 0)
 
