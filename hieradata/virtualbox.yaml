@@ -1,4 +1,5 @@
 ---
-dbuser: ossec
-dbpss: cheiGi0e
-mysql_root: aeCh6gah
+ossec::server::dbuser: ossec
+ossec::server::dbpass: cheiGi0e
+ossec::server::dbhost: 127.0.0.1
+ossec::server::mysql_root: aeCh6gah
