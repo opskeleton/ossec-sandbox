@@ -13,15 +13,31 @@ GIT
     editfile (0.0.1)
 
 GIT
+  remote: git://github.com/narkisr/puppet-common.git
+  ref: master
+  sha: 2d94636c91d7ce9a83f7669f370e246d2a784117
+  specs:
+    common (0.0.1)
+
+GIT
+  remote: git://github.com/narkisr/puppet-git.git
+  ref: master
+  sha: e692ea7e34377c44e951bfd950f50460f88220ad
+  specs:
+    git (0.0.1)
+
+GIT
   remote: git://github.com/puppetlabs/puppetlabs-mysql.git
   ref: master
-  sha: 6ec7872b444eb6caa3cfeb0117f975d9add70906
+  sha: d6e7d5200e94fff6fe24ef3c2bf7de547025a75c
   specs:
     mysql (2.0.1)
       puppetlabs/stdlib (>= 2.2.1)
 
 DEPENDENCIES
+  common (>= 0)
   editfile (>= 0)
+  git (>= 0)
   mysql (>= 0)
   puppetlabs/apt (>= 0)
   puppetlabs/stdlib (>= 0)

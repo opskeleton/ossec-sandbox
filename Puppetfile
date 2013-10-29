@@ -4,8 +4,6 @@ mod 'puppetlabs/stdlib'
 
 mod 'puppetlabs/apt'
 
-mod 'puppetlabs/apache'
-
 mod 'editfile', 
    :git => 'git://github.com/mstrauss/puppet-editfile.git'
 
