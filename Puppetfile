@@ -14,3 +14,6 @@ mod 'mysql',
 
 mod 'git',
   :git => 'git://github.com/narkisr/puppet-git.git'
+
+mod 'common',
+  :git => 'git://github.com/narkisr/puppet-common.git'
