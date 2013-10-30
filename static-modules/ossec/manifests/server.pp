@@ -2,6 +2,12 @@
 # see http://nolabnoparty.com/en/setup-ossec-with-mysql-and-analogi-in-centos-6/
 class ossec::server($dbuser='', $dbpass='',$dbhost='') {
 
+  if($::operatingsystemrelease = '12.04') {
+    package{'libapache2-mod-php5':
+      ensure  => present
+    }
+  }
+
   class{'ossec::analogi':
     dbuser => $dbuser,
     dbpass => $dbpass,
