@@ -3,3 +3,4 @@ ossec::server::dbuser: ossec
 ossec::server::dbpass: cheiGi0e
 ossec::server::dbhost: 127.0.0.1
 ossec::server::mysql_root: aeCh6gah
+ossec::agent::server_ip: 192.168.1.11
