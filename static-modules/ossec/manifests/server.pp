@@ -11,10 +11,10 @@ class ossec::server($dbuser='', $dbpass='',$dbhost='') {
   package{'ossec-hids-server':
     ensure   => present,
     provider => dpkg,
-    source   => '/vagrant/ossec-hids-server_2.7.0-ubuntu12_amd64.deb'
+    source   => '/vagrant/ossec-hids-server_2.7.0-ubuntu12_amd64.deb',
+    notify   => Exec['enable_database']
   }
 
-  Exec['apt_update'] -> Package <||>
 
   class{'mysql::server':
   } ->
@@ -46,7 +46,8 @@ class ossec::server($dbuser='', $dbpass='',$dbhost='') {
     command     => '/var/ossec/bin/ossec-control enable database',
     user        => 'root',
     refreshonly => true,
-    require     => [Package['ossec-hids-server'], Exec['setup-shema']]
+    require     => [Package['ossec-hids-server'], Exec['setup-schema'],
+                    File['/var/ossec/etc/ossec.conf']]
   }
 
   file { '/var/ossec/etc/ossec.conf':
