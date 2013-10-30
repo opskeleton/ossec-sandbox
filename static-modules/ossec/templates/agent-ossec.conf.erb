@@ -10,8 +10,8 @@
     <frequency>7200</frequency>
     
     <!-- Directories to check  (perform all possible verifications) -->
-    <directories check_all="yes">/etc,/usr/bin,/usr/sbin</directories>
-    <directories check_all="yes">/bin,/sbin</directories>
+    <directories check_all="yes" report_changes="yes" realtime="yes">/etc,/usr/bin,/usr/sbin</directories>
+    <directories check_all="yes" report_changes="yes" realtime="yes">/bin,/sbin</directories>
 
     <!-- Files/directories to ignore -->
     <ignore>/etc/mtab</ignore>
@@ -47,13 +47,4 @@
     <location>/var/log/mail.log</location>
   </localfile>
 
-  <localfile>
-    <log_format>apache</log_format>
-    <location>/var/log/apache2/access_log</location>
-  </localfile>
-
-  <localfile>
-    <log_format>apache</log_format>
-    <location>/var/log/apache2/error_log</location>
-  </localfile>
 </ossec_config>
